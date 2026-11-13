@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Space Defender - protect the galaxy from an incoming alien fleet.">
+  <title>Space Defender | Joel Yohannan</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="stars stars-one" aria-hidden="true"></div>
+  <div class="stars stars-two" aria-hidden="true"></div>
+  <main class="page-shell">
+    <header class="site-header">
+      <p class="eyebrow">GALACTIC DEFENSE SYSTEM // SECTOR 07</p>
+      <h1>SPACE <span>DEFENDER</span></h1>
+      <p class="student-name">Created by <strong>JOEL YOHANNAN</strong></p>
+      <p class="tagline">The last line of defense between Earth and the unknown.</p>
+    </header>
+
+    <section class="game-panel" aria-label="Space Defender game">
+      <div class="hud">
+        <div class="hud-item"><span class="hud-label">SCORE</span><strong id="score">0</strong></div>
+        <div class="hud-center"><span class="status-dot"></span><span id="status">DEFENSE SYSTEM ONLINE</span></div>
+        <div class="hud-item"><span class="hud-label">LIVES</span><strong id="lives">3</strong></div>
+      </div>
+
+      <div class="canvas-frame">
+        <canvas id="gameCanvas" width="540" height="400" aria-label="Game area. Move your ship with the left and right arrow keys and fire with the spacebar."></canvas>
+      </div>
+
+      <div class="game-actions">
+        <button id="playAgain" class="play-button" disabled>PLAY AGAIN <span aria-hidden="true">↻</span></button>
+        <button id="musicToggle" class="sound-button" type="button" aria-pressed="false">
+          <span aria-hidden="true">♫</span> MUSIC: OFF
+        </button>
+      </div>
+      <p class="instructions"><strong>CONTROLS</strong> &nbsp; ← → Move &nbsp; | &nbsp; SPACE Fire</p>
+      <p class="mobile-hint">On touch screens, use the controls below the game.</p>
+      <div class="touch-controls" aria-label="Touch controls">
+        <button id="leftControl" type="button" aria-label="Move left">◀</button>
+        <button id="fireControl" type="button" aria-label="Fire">FIRE</button>
+        <button id="rightControl" type="button" aria-label="Move right">▶</button>
+      </div>
+    </section>
+
+    <section class="mission-brief">
+      <div class="brief-icon" aria-hidden="true">✦</div>
+      <div>
+        <h2>YOUR MISSION</h2>
+        <p>Alien ships are approaching Earth. Pilot your defense craft, destroy every invader, and survive each wave. Each enemy destroyed earns <strong>10 points</strong>. The fleet gets faster after every wave—stay sharp, Commander!</p>
+      </div>
+    </section>
+    <footer>SPACE DEFENDER <span>•</span> PROTECT THE GALAXY <span>•</span> CSW 38: WEB ANIMATION</footer>
+  </main>
+</body>
+</html>
