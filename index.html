@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Defend the galaxy in Space Defender, a retro sci-fi arcade game.">
+   <title>Space Defender | Joel Yohannan</title>
+   <link rel="stylesheet" href="style.css">
+   <script src="script.js" defer></script>
+</head>
+<body>
+   <div class="stars" aria-hidden="true"></div>
+
+   <main class="page-shell">
+      <header class="site-header">
+         <p class="eyebrow">BRIDGING THE FINAL FRONTIER</p>
+         <h1>SPACE <span>DEFENDER</span></h1>
+         <p class="creator">Created by <strong>Joel Yohannan</strong></p>
+      </header>
+
+      <section class="intro" aria-labelledby="mission-title">
+         <div>
+            <p class="section-tag">MISSION BRIEFING // 001</p>
+            <h2 id="mission-title">The galaxy needs you.</h2>
+            <p class="story">Enemy ships are approaching the outer defense line. Pilot your starfighter, clear each wave, and protect the galaxy for as long as you can.</p>
+         </div>
+         <div class="mission-status" aria-label="Mission status">
+            <span class="status-dot"></span>
+            <span>SYSTEM ONLINE</span>
+         </div>
+      </section>
+
+      <section class="game-panel" aria-label="Space Defender game">
+         <div class="game-topline">
+            <span class="panel-label">DEFENSE GRID</span>
+            <span class="panel-label">SECTOR 07 · EARTH</span>
+         </div>
+
+         <div class="scoreboard" aria-live="polite">
+            <div class="stat"><span class="stat-label">SCORE</span><strong id="score">0</strong></div>
+            <div class="stat"><span class="stat-label">LIVES</span><strong id="lives">3</strong></div>
+            <div class="stat"><span class="stat-label">WAVE</span><strong id="wave">1</strong></div>
+         </div>
+
+         <canvas id="gameCanvas" width="540" height="400" aria-label="Space Defender game field. Use the arrow keys to move and the spacebar to fire."></canvas>
+
+         <div class="game-actions">
+            <button id="playAgain" class="play-button" type="button" disabled>RESTART / PLAY AGAIN</button>
+            <p class="game-hint" id="gameHint">Destroy every enemy ship to advance to the next wave.</p>
+         </div>
+
+         <div class="touch-controls" aria-label="Touch game controls">
+            <button class="control-button" id="moveLeft" type="button" aria-label="Move left">◀</button>
+            <button class="control-button fire-button" id="fire" type="button" aria-label="Fire laser">FIRE</button>
+            <button class="control-button" id="moveRight" type="button" aria-label="Move right">▶</button>
+         </div>
+      </section>
+
+      <section class="bottom-info">
+         <div class="info-card">
+            <span class="info-icon">⌨</span>
+            <div>
+               <h3>HOW TO PLAY</h3>
+               <p>Use <kbd>←</kbd> and <kbd>→</kbd> to move your ship. Press <kbd>SPACE</kbd> to fire lasers. On touchscreens, use the on-screen controls.</p>
+            </div>
+         </div>
+         <div class="info-card audio-card">
+            <span class="info-icon">♫</span>
+            <div class="audio-content">
+               <h3>MISSION AUDIO</h3>
+               <p>Optional original ambient synth soundtrack.</p>
+               <div class="audio-controls">
+                  <button id="audioToggle" class="audio-button" type="button" aria-pressed="false">ENABLE MUSIC</button>
+                  <label for="volume">VOLUME</label>
+                  <input id="volume" type="range" min="0" max="0.30" step="0.01" value="0.12">
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <footer>
+         <span>SPACE DEFENDER</span>
+         <span>ONE PILOT. ONE GALAXY. DON'T GIVE UP.</span>
+      </footer>
+   </main>
+</body>
+</html>
